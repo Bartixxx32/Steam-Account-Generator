@@ -25,12 +25,3 @@ test: off
 artifacts:
 - path: SteamAccCreator\bin\$(configuration)
   name: Release-windows-$(appveyor_build_version)
-deploy:
-- provider: GitHub
-  tag: v$(appveyor_build_version)
-  release: Steam Account Generator v$(appveyor_build_version)
-  auth_token:
-    secure: /fvZl/QGpo3y+3d8bWELQvz3qDIFEfiYDHvZg6ds1wMJ0gx0sunCVS2WwshPfh62
-  draft: true
-  prerelease: true
-  force_update: true
